@@ -10,6 +10,7 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
+dist-electron/
 *.local
 release/
 
@@ -28,3 +29,6 @@ release/
 .DS_Store
 .AppleDouble
 .LSOverride
+
+# Project Files
+release/
