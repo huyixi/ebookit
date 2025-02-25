@@ -1,13 +1,19 @@
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { SidebarProvider } from "@/components/ui/sidebar";
 import { AppSidebar } from "./app-sidebar";
+
+const sidebarConfig = {
+  width: "10rem",
+};
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <SidebarProvider>
+    <SidebarProvider
+      style={{
+        "--sidebar-width": sidebarConfig.width,
+      }}
+    >
       <AppSidebar />
-      <main>
-        <SidebarTrigger>{children}</SidebarTrigger>
-      </main>
+      <main>{children}</main>
     </SidebarProvider>
   );
 }
